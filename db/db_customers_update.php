@@ -14,7 +14,7 @@ include ("./db_connection.php");
 
 $sql = 
 "
-UPDATE customers 
+UPDATE 041_customers 
 SET customer_fname='$name ', customer_lname='$lname', customer_dni='$dni', customer_email='$email', customer_phone='$phone', customer_birthdate='$birthdate', customer_password= '$password', customer_status ='$status'
 WHERE customer_id = '$id';
 ";
@@ -27,7 +27,7 @@ $query = mysqli_query($mysqli, $sql);
 
 $sql_select = 
 "
-SELECT * FROM customers WHERE customer_id = '$id';
+SELECT * FROM 041_customers WHERE customer_id = '$id';
 ;
 ";
 $result = mysqli_query($mysqli, $sql_select);

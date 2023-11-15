@@ -9,7 +9,7 @@ if($date_in < $date_out){
     
 include ("db_connection.php");
 
-$sql = "CALL `checkAvailableRooms`('$date_in', '$date_out'); ";
+$sql = "CALL `041_checkAvailableRooms`('$date_in', '$date_out'); ";
 $result = mysqli_query($mysqli, $sql);
 $rooms  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 

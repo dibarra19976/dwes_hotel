@@ -9,7 +9,7 @@ include ("./db_connection.php");
 
 session_start();
 if($delete_confirmation=='yes'){
-    $sql = "UPDATE customers SET customer_status='disabled' WHERE customer_id='$id';";
+    $sql = "UPDATE 041_customers SET customer_status='disabled' WHERE customer_id='$id';";
     $result = mysqli_query($mysqli, $sql);
     $_SESSION['deleted'] = "yes";
     

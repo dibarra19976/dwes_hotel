@@ -3,7 +3,7 @@
 include ("../db/db_connection.php");
 $sql = 
 "
-SELECT * FROM room_types; 
+SELECT * FROM 041_room_types; 
 ";  
 
  

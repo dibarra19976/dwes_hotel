@@ -7,7 +7,7 @@ $password = $_POST['password'];
 
 $sql_query =
     "
-SELECT * FROM customers 
+SELECT * FROM 041_customers 
 WHERE customer_email = '$email'
 AND customer_password = '$password'; 
 ";
@@ -28,7 +28,7 @@ if (count($result) == 0) {
 
     $sql_query =
         "SELECT * 
-        FROM customers 
+        FROM 041_customers 
         WHERE customer_id = '$id'";
 
     $result = mysqli_query($mysqli, $sql_query);

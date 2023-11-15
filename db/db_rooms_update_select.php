@@ -4,7 +4,7 @@ $room_id = $_POST["room_id"];
 include ("../db/db_connection.php");
 $sql_query = 
 "
-SELECT * FROM rooms WHERE room_id = '$room_id';  
+SELECT * FROM 041_rooms WHERE room_id = '$room_id';  
 ";  
 
  

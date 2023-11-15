@@ -3,7 +3,7 @@
 include ("../db/db_connection.php");
 $sql_query = 
 "
-SELECT room_number, room_id FROM rooms WHERE !( room_status = 'unavailable'); 
+SELECT room_number, room_id FROM 041_rooms WHERE !( room_status = 'unavailable'); 
 ";  
 
 //CALL `checkAvailableRooms`('$date_in', '$date_out', '$room_type', 100); 

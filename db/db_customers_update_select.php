@@ -4,7 +4,7 @@ $customer_id = $_POST["customer_id"];
 include ("../db/db_connection.php");
 $sql_query = 
 "
-SELECT * FROM customers WHERE customer_id = '$customer_id';  
+SELECT * FROM 041_customers WHERE customer_id = '$customer_id';  
 ";  
 
  

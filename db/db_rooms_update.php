@@ -28,7 +28,7 @@ include ("./db_connection.php");
 
 $sql = 
 "
-UPDATE rooms  
+UPDATE 041_rooms  
 SET room_number='$number ', room_status='$status', room_available_extras='$json', room_img_main='$img_main', room_img_1='$img_1', room_img_2='$img_2', room_img_3='$img_3', room_type='$type'
 WHERE room_id = '$room_id'
     

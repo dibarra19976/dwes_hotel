@@ -3,7 +3,7 @@
 include("../db/db_connection.php");
 $sql =
   "
-SELECT * FROM reservations; 
+SELECT * FROM 041_reservations; 
 ";
 
 $result = mysqli_query($mysqli, $sql);

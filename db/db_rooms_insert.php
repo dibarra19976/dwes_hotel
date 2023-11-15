@@ -20,7 +20,7 @@ include ("./db_connection.php");
 
 $sql = 
 "
-INSERT INTO rooms 
+INSERT INTO 041_rooms 
 (room_number, room_status, room_available_extras , room_img_main , room_img_1 , room_img_2 , room_img_3, room_type )	
 VALUES (
 '$number ', '$status', '$json', '$img_main', '$img_1', '$img_2', '$img_3', '$type'

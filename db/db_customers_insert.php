@@ -14,7 +14,7 @@ include ("./db_connection.php");
 
 $sql = 
 "
-INSERT INTO customers 
+INSERT INTO 041_customers 
 (customer_fname, customer_lname, customer_dni , customer_email , customer_phone , customer_birthdate , customer_password, customer_status )	
 VALUES (
 '$name ', '$lname', '$dni', '$email', '$number', '$birthdate', '$password', '$status'
@@ -29,7 +29,7 @@ $query = mysqli_query($mysqli, $sql);
 
 $sql_select = 
 "
-SELECT * FROM customers ORDER BY customer_id DESC LIMIT 1;
+SELECT * FROM 041_customers ORDER BY customer_id DESC LIMIT 1;
 ";
 $result = mysqli_query($mysqli, $sql_select);
 

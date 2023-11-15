@@ -3,7 +3,7 @@
 include("../db/db_connection.php");
 $sql_query =
   "
-SELECT * FROM customers WHERE !( customer_status = 'disabled'); 
+SELECT * FROM 041_customers WHERE !( customer_status = 'disabled'); 
 ";
 
 //CALL `checkAvailableRooms`('$date_in', '$date_out', '$room_type', 100); 
