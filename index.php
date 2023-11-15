@@ -13,9 +13,9 @@
 <body>
     <?php include("./header.php") ?>
 
-    <div class="container-fluid vh-100 content w-100 " >
+    <div class="container-fluid vh-100 content px-0 ">
 
-        <div class="row h-50 banner">
+        <!-- <div class="row h-50 banner">
             <div class="col-xl-4 col-lg-4 col-sm-12 h-100 p-0">
                 <div id="carouselExample" class="carousel slide h-100">
                     <div class="carousel-inner h-100" >
@@ -43,10 +43,29 @@
                 <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, illo.</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dolorem saepe ipsa fugit culpa adipisci harum, reprehenderit dolor odit velit maiores, necessitatibus quia dict   a, minima consequuntur accusamus perferendis asperiores pariatur? </p>
             </div>
+        </div> -->
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/placeholders/ex1.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="./img/placeholders/ex2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="./img/placeholders/ex3.webp" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </div>
-
-    <!-- <div class="container">
+        <!-- <div class="container">
         <form class="row align-items-start" action="db/db_rooms_select_availability.php" method="POST">
             <div class="mb-3 col">
                 <label for="date_in" class="form-label">Check in</label>

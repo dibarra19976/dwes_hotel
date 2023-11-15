@@ -1,70 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
 
+body {
+  padding: 0;
+  margin: 0;
+  background-color: gray !important;
+  font-family: "Gabarito", sans-serif !important;
+  /* padding-top: 100px !important; */
 
-body{
-    padding: 0;
-    margin: 0;
-    background-color: gray !important;
-    font-family: 'Gabarito', sans-serif !important;
-    /* padding-top: 100px !important; */
-
-    background-image: url(/student041/dwes/img/bg.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    z-index: 0 !important;
+  background-image: url(/student041/dwes/img/bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: 0 !important;
 }
-.header{
-    background-color: azure;
-    height: 30pt;
-    width: 100%;
+.header {
+  background-color: azure;
+  height: 30pt;
+  width: 100%;
 }
-.button:hover{
-    background-color: rgb(136, 136, 136);
+.button:hover {
+  background-color: rgb(136, 136, 136);
 }
-.alice-bg{
-    background-color: aliceblue;
-}
-
-.btn-link{
-    color: white !important;
-    text-decoration: none !important;
+.alice-bg {
+  background-color: aliceblue;
 }
 
-.table-border{
-    border-radius: 15px !important;
-    overflow: hidden !important;
+.btn-link {
+  color: white !important;
+  text-decoration: none !important;
 }
 
-
-.z-on-top{
-    z-index: 5 !important;
+.table-border {
+  border-radius: 15px !important;
+  overflow: hidden !important;
 }
 
-.navbar{
-    z-index: 1 !important;
+.z-on-top {
+  z-index: 5 !important;
 }
 
-.content{
- padding-top: 76px !important;
+.navbar {
+  z-index: 1 !important;
 }
 
-.banner{
-    background-color: aquamarine;
+.content {
+  padding-top: 76px !important;
+}
+
+.banner {
+  background-color: aquamarine;
 }
 /* *{
     outline: red solid 1px;
 } */
 
-.navbar-custom{
-    background-color: #6f769f !important;
+.navbar-custom {
+  background-color: #6f769f !important;
 }
 /* 
 .table-responsive {
     max-height: 600px !important;
 } */
 
-.navbar{
-    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+.navbar {
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+  height: 0;
+  padding-bottom: 25%; /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.carousel-item {
+  position: absolute !important; /* Bootstrap is insistent */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-item img {
+  height: 100%; /* Bootstrap handles width already */
+  object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+.hover-cell:hover {
+    background-color: #ececec !important;
 }

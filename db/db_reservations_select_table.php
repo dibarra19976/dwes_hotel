@@ -73,9 +73,9 @@ $i = 1;
           
           foreach ($value as $key2 => $value2) {
             echo " <td>";
-            echo "<table class='table table-hover '> <tr>";
+            echo "<table class='table  '> <tr>";
             foreach( $value2 as $key3 => $value3) {
-              echo "<td>". $value3 ."</td>" ;
+              echo "<td class='hover-cell'>". $value3 ."</td>" ;
             }            
             echo "</tr></table>";
             echo "</td> ";
