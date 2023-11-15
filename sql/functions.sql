@@ -1,5 +1,5 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` FUNCTION `041_checkAvailableRooms`(`var_date_in` DATE, `var_date_out` DATE, `var_type` INT) RETURNS int(11)
+CREATE DEFINER=`root`@`localhost` FUNCTION `041_checkAvailableRooms`(`var_date_in` DATE, `var_date_out` DATE) RETURNS int(11)
 BEGIN
     DECLARE available_room_id INT;
     
@@ -13,7 +13,6 @@ BEGIN
                 var_date_in < reservation_date_out AND var_date_out > reservation_date_in
                 AND reservation_status <> 'cancelled'
         )         
-        AND var_type = room_type
         AND room_status <>'unavailable'
         ORDER BY rand()
         LIMIT 1

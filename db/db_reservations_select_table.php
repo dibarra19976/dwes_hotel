@@ -3,11 +3,15 @@
 include("../db/db_connection.php");
 $sql =
   "
-SELECT * FROM 041_reservations; 
-";
+
+  SELECT `reservation_id`,`reservation_date_in`,`reservation_date_out`,`reservation_room_price`,`reservation_room_extras`, `reservation_services`,`reservation_status`, `041_fullName`(c.customer_fname, c.customer_lname) AS 'reservation_client', r.room_number AS 'reservation_room' FROM `041_reservations` 
+  INNER JOIN `041_rooms` AS r ON r.room_id = `reservation_room`
+  INNER JOIN `041_customers` AS c ON c.customer_id = `reservation_client`;
+  ";
 
 $result = mysqli_query($mysqli, $sql);
 $reservations  = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
 $i = 1;
 
 ?>
@@ -17,8 +21,8 @@ $i = 1;
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Client</th>
         <th scope="col">Room</th>
+        <th scope="col">Client</th>
         <th scope="col">Date IN</th>
         <th scope="col">Date OUT</th>
         <th scope="col">Room Price (Per night)</th>
@@ -37,7 +41,7 @@ $i = 1;
         echo "</th> <td>";
         echo $reservation['reservation_room'];
         echo "</td> <td>";
-         echo $reservation["reservation_client"];
+        echo $reservation["reservation_client"];
         echo "</td> <td>";
         echo $reservation['reservation_date_in'];
         echo "</td> <td>";

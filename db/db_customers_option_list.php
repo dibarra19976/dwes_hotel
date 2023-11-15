@@ -12,7 +12,7 @@ $result = mysqli_query($mysqli, $sql_query);
 $customers  = mysqli_fetch_all($result, MYSQLI_NUM);
 $i = 1;
 foreach ($customers as &$customer) {
-    echo "<option class='datalistOptions' values='$customer[1]' > $customer[1] $customer[0]</option>" ;
+    echo "<option class='datalistOptions' value='$customer[1]' > $customer[1] $customer[0]</option>" ;
     //"<option class="" value="' + $i +'">' + $customer+ '</option>';
     $i = $i +1;   
     

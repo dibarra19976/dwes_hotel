@@ -97,7 +97,7 @@ session_start();
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_select.php">Select Reservation</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_select.php">Insert Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_insert.php">Insert Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_select.php">Update Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_select.php">Delete Reservation</a></li>
                 </ul>
