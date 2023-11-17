@@ -8,15 +8,15 @@ include("../db/db_room_type_select.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insert room</title>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
     <?php include("../header.php") ?>
-    <div class="container content">
-        <h1>Insert room </h1>
+    <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
+        <div class="float-content">        <h1>Insert room </h1>
 
         <form class="row" action="../db/db_rooms_insert.php" method="POST">
             <div class=" col">
@@ -25,7 +25,7 @@ include("../db/db_room_type_select.php");
             </div>
             <div class="col">
                 <label class="form-label" for="status" required>Room Status</label>
-                <select class="form-control" id="status" name="status">
+                <select class="form-select" id="status" name="status">
                     <option values="ready">ready</option>
                     <option values="check-in">check-in</option>
                     <option values="check-out">check-out</option>
@@ -33,7 +33,9 @@ include("../db/db_room_type_select.php");
                 </select>
             </div>
             <div class=" col-12">
-                <div class="d-flex justify-content-evenly">
+            <label for="">Room Type</label>            
+
+            <div class="d-flex justify-content-between">
                     <?php
                     $i = 0;
                     foreach ($room_types as $type) {
@@ -70,11 +72,12 @@ include("../db/db_room_type_select.php");
                 <input type="text" class="form-control" name="img_3" >
             </div>
             
-            <button type="submit" class=" btn btn-primary">Submit</button>
+            <button type="submit" class=" btn btn-primary ">Submit</button>
 
 
     </div>
     </form>
+    </div>
     </div>
 
 </body>

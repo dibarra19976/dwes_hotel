@@ -5,8 +5,11 @@ $sql =
   "
 
   SELECT `reservation_id`,`reservation_date_in`,`reservation_date_out`,`reservation_room_price`,`reservation_room_extras`, `reservation_services`,`reservation_status`, `041_fullName`(c.customer_fname, c.customer_lname) AS 'reservation_client', r.room_number AS 'reservation_room' FROM `041_reservations` 
+  
   INNER JOIN `041_rooms` AS r ON r.room_id = `reservation_room`
-  INNER JOIN `041_customers` AS c ON c.customer_id = `reservation_client`;
+  INNER JOIN `041_customers` AS c ON c.customer_id = `reservation_client`
+  WHERE reservation_status NOT IN ('cancelled', 'check-out')
+  ORDER BY reservation_id ASC
   ";
 
 $result = mysqli_query($mysqli, $sql);
@@ -97,7 +100,7 @@ $i = 1;
 
 
       ?>
-       <div class="d-flex text-center  flex-column ">
+       <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
        <form action="../forms/form_rooms_update.php" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
           <button class="btn btn-primary">Update</button>

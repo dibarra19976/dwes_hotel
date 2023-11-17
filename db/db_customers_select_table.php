@@ -6,7 +6,6 @@ $sql_query =
 SELECT * FROM 041_customers WHERE !( customer_status = 'disabled'); 
 ";
 
-//CALL `checkAvailableRooms`('$date_in', '$date_out', '$room_type', 100); 
 
 $result = mysqli_query($mysqli, $sql_query);
 $customers  = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -53,7 +52,7 @@ $i = 1;
         echo $customer['customer_status'];
         echo "</td> <td>";
       ?>
-       <div class="d-flex text-center  flex-column ">
+       <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
         <form action="../forms/form_customers_update.php" method="POST">
           <input type="text" name="customer_id" id="customer_id" value="<?php echo $customer['customer_id']; ?>" hidden>
           <button class="btn btn-primary">Update</button>

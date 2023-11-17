@@ -51,7 +51,7 @@ include("../db/db_room_type_select.php");
         echo $room['room_status'];
         echo "</td> <td>";
       ?>
-       <div class="d-flex text-center  flex-column ">
+       <div class="d-flex text-center  flex-column align-items-center justify-content-between ">
        <form action="../forms/form_rooms_update.php" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
           <button class="btn btn-primary">Update</button>

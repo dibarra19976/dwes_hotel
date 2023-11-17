@@ -15,7 +15,7 @@
 <body>
     <?php include("../header.php") ?>
     <div class="container-fluid content">
-        <h1>Rooms</h1>
+        <h1 class="white">Rooms</h1>
     <?php
     include("../db/db_rooms_select_table.php");
     ?>

@@ -30,3 +30,4 @@ VALUES (
  
 $query = mysqli_query($mysqli, $sql);
 
+header("Location: /student041/dwes/forms/form_rooms_insert.php");     

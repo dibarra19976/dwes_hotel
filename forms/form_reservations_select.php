@@ -15,7 +15,7 @@
 <body>
     <?php include("../header.php") ?>
     <div class="container-fluid content">
-        <h1>Reservations</h1>
+        <h1 class="white">Reservations</h1>
     <?php
     include("../db/db_reservations_select_table.php");
     ?>

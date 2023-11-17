@@ -1,0 +1,3 @@
+min="<?php echo date("Y-m-d") ?>"
+
+para que no se pueda seleccinar fechas antes de la actuaal

@@ -7,15 +7,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Delete room</title>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
     <?php include("../header.php") ?>
-    <div class="container content">
-        <h1>Delete room</h1>
+    <div class="container vh-100 d-flex flex-column align-items-center justify-content-center position-relative ">
+        <div class="float-content ">        <h1>Delete room</h1>
 
         <form class="row align-items-start" action="../db/db_rooms_delete.php" method="POST">
 
@@ -47,6 +47,7 @@
         <input class="form-control" type="text" name="id" id="id" required value="<?php echo $_POST['room_id']; ?>">
     </div>
     </form>
+    </div>
     </div>
 
 </body>

@@ -7,16 +7,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insert customer</title>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
     <?php include("../header.php") ?>
-    <div class="container content">
-    <h1>Insert customer</h1>
-
+    <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
+        <div class="float-content">
+        <h1>Insert customer</h1>
         <form class="row align-items-start" action="../db/db_customers_insert.php" method="POST">
             
             <div class="mb-3 col-12">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col">
                             <label class="form-label" for="status" required>User Status</label>
-                            <select class="form-control" id="status" name="status">
+                            <select class="form-select" id="status" name="status">
                                 <option values="customer">customer</option>
                                 <option values="admin">admin</option>
                                 <option values="disabled">disabled</option>
@@ -74,6 +74,7 @@
             <button type="submit" class=" btn btn-primary">Submit</button>
     </div>
     </form>
+        </div>
     </div>
 
 </body>

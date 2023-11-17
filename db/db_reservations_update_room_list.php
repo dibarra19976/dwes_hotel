@@ -9,10 +9,13 @@ SELECT room_number, room_id FROM 041_rooms WHERE !( room_status = 'unavailable')
  
 $result = mysqli_query($mysqli, $sql_query);
 $rooms  = mysqli_fetch_all($result, MYSQLI_NUM);
-$i = 1;
 foreach ($rooms as $room) {
-    echo "<option class='datalistOptions' value='$room[1]' > $room[1] Room $room[0]</option>" ;
-    $i = $i +1;   
-    
+    $id = $room[1];
+    $number = $room[0];
+    echo "<option value='$id' ";
+    if ($room_id == $id) {
+        echo "selected='selected'";
+    }
+    echo " class='datalistOptions' >" . $id . " - Room " . $number . "</option>"; 
 }
 ?>

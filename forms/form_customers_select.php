@@ -15,7 +15,7 @@
 <body>
     <?php include("../header.php") ?>
     <div class="container-fluid content">
-    <h1>Customers</h1>
+    <h1 class="white ">Customers</h1>
     <?php 
     include("../db/db_customers_select_table.php");
     ?>

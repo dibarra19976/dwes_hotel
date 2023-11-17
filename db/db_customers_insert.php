@@ -20,8 +20,6 @@ VALUES (
 '$name ', '$lname', '$dni', '$email', '$number', '$birthdate', '$password', '$status'
     )
 ";
-
-//CALL `checkAvailableRooms`('$date_in', '$date_out', '$room_type', 100); 
  
 $query = mysqli_query($mysqli, $sql);
 
@@ -37,3 +35,4 @@ $select  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 print_r($select);
 
 
+header("Location: /student041/dwes/forms/form_customers_insert.php");     

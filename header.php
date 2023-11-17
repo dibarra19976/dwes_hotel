@@ -19,7 +19,6 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
   <link rel="stylesheet" href="/student041/dwes/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -98,10 +97,24 @@ session_start();
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_select.php">Select Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_insert.php">Insert Reservation</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_select.php">Update Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_update_call.php">Update Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_select.php">Delete Reservation</a></li>
                 </ul>
               </li>
+              <li class="nav-item dropstart">
+                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Invoices
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">Select Invoices</a></li>
+                  <li><a class="dropdown-item" href="">Insert Invoice</a></li>
+                  <li><a class="dropdown-item" href="">Update Invoice</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="">Services</a>
+          </li>
             </ul>
         <?php
           }

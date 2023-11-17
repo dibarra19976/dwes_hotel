@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Delete customer</title>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
@@ -17,12 +17,11 @@
     
     <?php include("../header.php"); 
     ?>
-    <div class="container position-relative content">
-        <?php 
+    <?php 
         
         if (isset($_SESSION['deleted'])){
             echo"
-        <div class='alert alert-primary alert-dismissible fade show position-absolute start-50 z-on-top translate-middle w-75' role='alert'>"
+        <div class='padding-notification alert alert-primary alert-dismissible fade show position-absolute start-50 z-on-top translate-middle w-75' role='alert'>"
         ;
         if($_SESSION['deleted']=="yes"){
             echo "User was deleted";
@@ -35,6 +34,10 @@
         }
         unset($_SESSION['deleted']);
         ?>
+    <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
+        <div class="float-content w-100">
+
+        
         <h1>Delete customer</h1>
         <form class="row align-items-start" action="./form_customers_delete.php" method="POST">
         
@@ -42,7 +45,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="customer_id"  class="form-label">Select a customer: </label>
-                        <select class="form-input w-100" name="customer_id">
+                        <select class="form-select w-100" name="customer_id">
                             <?php 
                            include("../db/db_customers_option_list.php");
                            
@@ -58,6 +61,7 @@
             <button type="submit" class=" btn btn-primary">Submit</button>
     </div>
     </form>
+    </div>
     </div>
 
 </body>

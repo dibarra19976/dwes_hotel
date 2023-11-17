@@ -1,0 +1,41 @@
+Hacer el css de la pagina
+Rellenar las contraseñas y otros campos vacios de customers
+Password recovery
+Ratings
+en las tablas poner la url de una imagen
+https://stackoverflow.com/questions/2447211/php-pass-post-variables-with-header
+carrito de compra
+MANUAL/WIKI con markdown
+https://www.mkdocs.org/
+https://www.w3schools.com/php/func_array_in_array.asp
+hacer que los usuarios disabled/deleted no hagan log in
+apartado de my account
+añadir el mensaje de pop up a los update e insert 
+add an accesed from global variable to the contextual update and delete
+cambiar reservation status a set
+revisar calculo extras para ver si puedo cambiar nombre
+hacerlo reservation id + 1-4 (servicio) + ( count + 1)
+añadir trim a login
+que los usuarios disbaled no puedan iniciar sesion
+revisar que las tablas set tengan as deifned
+hacer lo de los checkbox e inputs de valen en resercations y otros selects blablabla
+
+hacer connection en mi db
+
+hacer un archivo de actualizacion con las tablas nuevas 
+
+REVISAR auto-increment, y default value
+
+COMPARAR LAS TABLAS ANTIGUAS A LAS NUEVAS
+
+añadir drop table al principio
+
+acabar reservation update y delete (que lo haga cancelled y luego create invoice
+
+)
+
+hacer tabla invoice (el resto no)
+
+insert invoice que sea solo el delete de reservations
+
+crear isiarop emroqie amtes de mandarlo

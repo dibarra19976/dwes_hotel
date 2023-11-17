@@ -66,11 +66,4 @@ if ($date_in < $date_out) {
     }
 }
 
-// $sql_select = 
-// "
-// SELECT * FROM 041_customers ORDER BY customer_id DESC LIMIT 1;
-// ";
-// $result = mysqli_query($mysqli, $sql_select);
-
-// $select  = mysqli_fetch_all($result, MYSQLI_ASSOC);
-// print_r($select);
+header("Location: /student041/dwes/forms/form_reservations_insert.php");     

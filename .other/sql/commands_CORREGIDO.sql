@@ -8,7 +8,7 @@ CREATE TABLE `041_room_types` (
 );
 
 CREATE TABLE `041_rooms` (
-  `room_id` int(11) NOT NULL,
+  `room_id` int(11) NOT NULL AUTO_INCREMENT,
   `room_number` varchar(5) DEFAULT NULL,
   `room_available_extras` json,
   `room_type` int(11) DEFAULT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE `041_customers` (
 ); 
 
 CREATE TABLE `041_reservations` (
-  `reservation_id` int(11) NOT NULL,
+  `reservation_id` int(11) NOT NULL AUTO_INCREMENT,
   `reservation_client` int(11) DEFAULT NULL,
   `reservation_room` int(11) DEFAULT NULL,
   `reservation_date_in` date DEFAULT NULL,

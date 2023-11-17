@@ -9,14 +9,15 @@ include("../db/db_rooms_update_select.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update room</title>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
     <?php include("../header.php") ?>
-    <div class="container content">
+    <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
+        <div class="float-content w-100">            
         <h1>Update room </h1>
 
         <form class="row" action="../db/db_rooms_update.php" method="POST">
@@ -26,22 +27,28 @@ include("../db/db_rooms_update_select.php");
             </div>
             <div class="col">
                 <label class="form-label" for="status" required>Room Status</label>
-                <select class="form-control" id="status" name="status">
-                    <option values="ready">ready</option>
-                    <option values="check-in">check-in</option>
-                    <option values="check-out">check-out</option>
-                    <option values="unavailable">unavailable</option>
+                <select class="form-select" id="status" name="status">
+                    <option values="ready" <?php if ($room[0]['room_status'] == "ready") echo "selected='selected'" ?>>ready</option>
+                    <option values="check-in" <?php if ($room[0]['room_status'] == "check-in") echo "selected='selected'" ?>>check-in</option>
+                    <option values="check-out" <?php if ($room[0]['room_status'] == "check-out") echo "selected='selected'" ?>>check-out</option>
+                    <option values="unavailable" <?php if ($room[0]['room_status'] == "unavailable") echo "selected='selected'" ?>>unavailable</option>
                 </select>
             </div>
             <div class=" col-12">
-                <div class="d-flex justify-content-evenly">
+                <label for="">Room Type</label>            
+                <div class="d-flex justify-content-between">
                     <?php
                     $i = 0;
                     foreach ($room_types as $type) {
+                        $checked = $type["type_id"] == $room[0]["room_type"] ? "checked" : " ";
+                     
                         echo
+                        
                         '
                         <div class="">
-                        <input class="form-check-input" type="radio"  required name="type" id="room', ($i + 1), '" value="', $type['type_id'], '">
+                        <input class="form-check-input" type="radio" ', $checked, '  name="type" id="room', ($i + 1), '" value="', $type['type_id'], " "; 
+                    
+                        echo '">
                         <label class="form-check-label" for="room', ($i + 1), '">',
                         $type['type_name'], " (", $type['type_id'], ")",
                         '</label>
@@ -71,7 +78,8 @@ include("../db/db_rooms_update_select.php");
                 <input type="text" class="form-control" name="img_3" value="<?php echo $room[0]['room_img_3'] ?>">
             </div>
             <div class="col-12">
-                <h2>Extras</h2>
+                <label for="">Extras</label>
+                <br>
                 <?php
 
                 $json = $room[0]['room_available_extras'];
@@ -95,6 +103,7 @@ include("../db/db_rooms_update_select.php");
 
     </div>
     </form>
+    </div>
     </div>
 
 </body>
