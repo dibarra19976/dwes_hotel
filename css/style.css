@@ -128,3 +128,19 @@ label{
 .padding-notification{
   margin-top: 100px !important;
 }
+
+.rooms-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300  px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.room-card{
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  padding: 10px;
+}

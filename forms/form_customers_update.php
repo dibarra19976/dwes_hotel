@@ -54,14 +54,14 @@ include("../db/db_customers_update_select.php");
                         </div>
                         <div class="col">
                             <label class="form-label" for="password">Password</label>
-                            <input class="form-control" type="password" name="password" id="password" required value="<?php echo $customer[0]['customer_password']; ?>">
+                            <input class="form-control" type="password" name="password" id="password" required value="<?php echo $customer[0]['customer_password'] ? : "$customer[0]['customer_password'] "; ?>">
                         </div>
                     </div>
                     <div class="mb-3 col-12">
                         <div class="row">
                             <div class="col">
                                 <label class="form-label" for="phone">Phone Number</label>
-                                <input class="form-control" type="text" name="phone" id="phone" required value="<?php echo $customer[0]['customer_phone']; ?>">
+                                <input class="form-control" type="text" name="phone" id="phone" required value="<?php echo $customer[0]['customer_phone'] ?  $customer[0]['customer_phone'] : " "; ?>">
                             </div>
                             <div class="col">
                                 <label class="form-label" for="status" required>User Status</label>

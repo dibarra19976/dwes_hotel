@@ -35,4 +35,4 @@ $select  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 print_r($select);
 
 
-header("Location: /student041/dwes/forms/form_customers_update.php");     
+header("Location: /student041/dwes/forms/form_customers_update_call.php");     

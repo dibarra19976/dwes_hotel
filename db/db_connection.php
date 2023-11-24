@@ -1,5 +1,5 @@
 <?php 
 
-$mysqli = mysqli_connect("localhost","root","","041_hotel");
+$mysqli = mysqli_connect("localhost", "root" ,"","041_hotel" );
 
 ?>

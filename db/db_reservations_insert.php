@@ -66,4 +66,3 @@ if ($date_in < $date_out) {
     }
 }
 
-header("Location: /student041/dwes/forms/form_reservations_insert.php");     

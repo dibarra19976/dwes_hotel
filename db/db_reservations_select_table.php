@@ -101,11 +101,11 @@ $i = 1;
 
       ?>
        <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
-       <form action="../forms/form_rooms_update.php" method="POST">
-          <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
+       <form action="../forms/form_reservations_update.php" method="POST">
+          <input type="text" name="reservation_id" id="reservation_id" value="<?php echo $reservation['reservation_id']; ?>" hidden>
           <button class="btn btn-primary">Update</button>
         </form>
-        <form action="../forms/form_rooms_delete.php" method="POST">
+        <form action="" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
           <button class="btn btn-secondary">Delete</button>
         </form>

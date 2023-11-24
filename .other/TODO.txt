@@ -39,3 +39,9 @@ hacer tabla invoice (el resto no)
 insert invoice que sea solo el delete de reservations
 
 crear isiarop emroqie amtes de mandarlo
+
+reordernarlo todo por sub carpetas
+
+solo hacer una carpeta de imagenes
+hacer un check para elegir si actualizar las imagenes por ruta o por archivo
+hacer un innerjoin para los tipos

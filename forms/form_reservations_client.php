@@ -45,7 +45,35 @@
                     <button type="submit" class=" btn btn-primary">Submit</button>
         </div>
         </form>
+        <div class="">
+            <div class="rooms-container">
+                <?php
 
+                if (isset($_SESSION["rooms_select"])) {
+                    $rooms = $_SESSION["rooms_select"];
+                    unset($_SESSION["rooms_select"]);
+                    unset($_SESSION["date_in"]);
+                    unset($_SESSION["date_out"]);
+
+                    foreach ($rooms as $room) {
+                ?>
+                        <div class="room-card alice-bg">
+                            <h5>Room <?php echo $room["room_number"] ?></h5>
+                            <img class="img-fluid py-3 " src="<?php echo "/student041/dwes" . $room["room_img_main"] ?>" alt="">
+                            <form action="#" method="POST">
+                                <input type="hidden" name="room_id" value="<?php echo $room["room_id"]?>">
+                                <input type="submit" value="Reserve Room" class="btn btn-primary">
+                            </form>
+                        </div>
+
+                <?php
+                    }
+                }
+
+
+                ?>
+            </div>
+        </div>
     </div>
 </body>
 

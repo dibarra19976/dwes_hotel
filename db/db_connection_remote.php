@@ -1,9 +1,4 @@
 <?php 
-$user = "dwess1234";
-$password = "test1234.";
-$server = "remotehost.es";
-$database = "dwesdatabase";
-
-$mysqli = mysqli_connect($server,$user ,$password,$database );
+$mysqli = mysqli_connect("remotehost.es", "dwess1234" ,"test1234.","dwesdatabase" );
 
 ?>

@@ -1,0 +1,1 @@
+setcookie("cookietest", 123, 1000);

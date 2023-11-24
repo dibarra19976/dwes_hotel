@@ -106,14 +106,14 @@ session_start();
                   Invoices
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="">Select Invoices</a></li>
-                  <li><a class="dropdown-item" href="">Insert Invoice</a></li>
-                  <li><a class="dropdown-item" href="">Update Invoice</a></li>
+                  <li><a class="dropdown-item" href="#">Select Invoices</a></li>
+                  <li><a class="dropdown-item" href="#">Insert Invoice</a></li>
+                  <li><a class="dropdown-item" href="#">Update Invoice</a></li>
 
                 </ul>
               </li>
               <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="">Services</a>
+            <a class="nav-link" aria-current="page" href="#">Services</a>
           </li>
             </ul>
         <?php
