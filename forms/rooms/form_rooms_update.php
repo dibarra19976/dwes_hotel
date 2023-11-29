@@ -15,7 +15,8 @@ include("../db/db_rooms_update_select.php");
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include('/student041/dwes/header.php'); 
+?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
         <div class="float-content w-100">            
         <h1>Update room </h1>
@@ -95,9 +96,7 @@ include("../db/db_rooms_update_select.php");
                 }
                 ?>
             </div>
-            <div class="d-none">
-                <input class="form-control" type="text" name="room_id" id="room_id" required value="<?php echo $room[0]['room_id']; ?>">
-            </div>
+            <input class="form-control" type="hidden" name="room_id" id="room_id" required value="<?php echo $room[0]['room_id']; ?>">
             <button type="submit" class=" btn btn-primary">Submit</button>
 
 

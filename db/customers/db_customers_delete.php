@@ -5,7 +5,7 @@
 $delete_confirmation = $_POST['delete_confirmation'];
 $id = $_POST['id'];
 
-include ("./db_connection.php");
+include ($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 session_start();
 if($delete_confirmation=='yes'){
@@ -19,7 +19,7 @@ else{
 }
 
 
-header("Location: /student041/dwes/forms/form_customers_delete_call.php");     
+header("Location: /student041/dwes/forms/customers/form_customers_delete_call.php");     
  
 
 

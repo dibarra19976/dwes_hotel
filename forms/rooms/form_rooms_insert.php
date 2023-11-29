@@ -1,5 +1,5 @@
 <?php
-include("../db/db_room_type_select.php");
+include('/student041/dwes/db/rooms/db_room_type_select.php'); 
 
 ?>
 <!DOCTYPE html>

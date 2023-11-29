@@ -1,20 +1,9 @@
-<!doctype html>
-<html lang="en">
-
-
-
 <?php
 session_start();
-// if(isset($_SESSION['login_id']))
-//     {
-//       $dir = $_SERVER['DOCUMENT_ROOT'] .  "/student041/dwes/db/db_connection.php";
-//       include ($dir);
-
-
-//     }    
-
 ?>
 
+<!doctype html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -24,6 +13,7 @@ session_start();
 </head>
 
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -41,18 +31,17 @@ session_start();
             <a class="nav-link" href="/student041/dwes/forms/form_reservations_client.php">Reservations</a>
           </li>
 
-
           <?php
           if (!isset($_SESSION["login_id"])) {
           ?>
             <li class="nav-item">
-              <a href="/student041/dwes/forms/form_log_in.php"><button class="btn btn-primary">Log In</button></a>
-              <a href="/student041/dwes/forms/form_log_in.php"><button class="btn btn-secondary">Register</button></a>
+              <a href="/student041/dwes/forms/login/form_log_in.php"><button class="btn btn-primary">Log In</button></a>
+              <a href="/student041/dwes/forms/login/form_log_in.php"><button class="btn btn-secondary">Register</button></a>
             </li> <?php
                 } else {
                   ?>
             <li class="nav-item">
-              <a href="/student041/dwes/forms/form_log_out.php"><button class="btn btn-primary">Log Out</button></a>
+              <a href="/student041/dwes/forms/login/form_log_out.php"><button class="btn btn-primary">Log Out</button></a>
             </li> <?php
                 }
                   ?>
@@ -73,10 +62,10 @@ session_start();
                   Customers
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_customers_select.php">Select Customer</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_customers_insert.php">Insert Customer</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_customers_update_call.php">Update Customer</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_customers_delete_call.php">Delete Customer</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_select.php">Select Customer</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_insert.php">Insert Customer</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_update_call.php">Update Customer</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_delete_call.php">Delete Customer</a></li>
                 </ul>
               </li>
               <li class="nav-item dropstart">
@@ -84,10 +73,10 @@ session_start();
                   Rooms
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_select.php">Select Rooms</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_insert.php">Insert Rooms</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_update_call.php">Update Rooms</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_delete_call.php">Delete Rooms</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/rooms/form_rooms_select.php">Select Rooms</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/rooms/form_rooms_insert.php">Insert Rooms</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/rooms/form_rooms_update_call.php">Update Rooms</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/rooms/form_rooms_delete_call.php">Delete Rooms</a></li>
                 </ul>
               </li>
               <li class="nav-item dropstart">
@@ -95,10 +84,10 @@ session_start();
                   Reservations
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_select.php">Select Reservation</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_insert.php">Insert Reservation</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_reservations_update_call.php">Update Reservation</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/form_rooms_select.php">Delete Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_select.php">Select Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_insert.php">Insert Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_update_call.php">Update Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/rooms/form_rooms_select.php">Delete Reservation</a></li>
                 </ul>
               </li>
               <li class="nav-item dropstart">
@@ -113,23 +102,18 @@ session_start();
                 </ul>
               </li>
               <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Services</a>
-          </li>
+                <a class="nav-link" aria-current="page" href="#">Services</a>
+              </li>
             </ul>
         <?php
           }
         }
         ?>
-
-
-
-
         <h5 class="navbar-nav ml-auto mb-2 mb-lg-0 d-none d-lg-block d-xl-block d-xxl-block mw-5">
           Welcome, <?php
                     $name =  ($_SESSION['login_fname'] ?? "Guest ") . " " . ($_SESSION['login_lname'] ?? "");
                     echo $name;
                     ?>
-
         </h5>
       </div>
     </div>

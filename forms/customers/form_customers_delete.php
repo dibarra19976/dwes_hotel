@@ -13,12 +13,12 @@
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . '/student041/dwes/header.php') ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  ">
         <div class="float-content">
             <h1>Delete customer</h1>
 
-            <form class="row align-items-start" action="../db/db_customers_delete.php" method="POST">
+            <form class="row align-items-start" action="/student041/dwes/db/customers/db_customers_delete.php" method="POST">
 
                 <div class="mb-3 col-12">
                     <div class="row">
@@ -44,9 +44,7 @@
 
                 <button type="submit" class=" btn btn-primary">Submit</button>
         </div>
-        <div class="d-none">
-            <input class="form-control" type="text" name="id" id="id" required value="<?php echo $_POST['customer_id']; ?>">
-        </div>
+        <input class="form-control" type="hidden" name="id" id="id" required value="<?php echo $_POST['customer_id']; ?>">
         </form>
     </div>
     </div>

@@ -10,16 +10,14 @@ $number = $_POST['number'];
 $status = $_POST['status'];
 
 
-include ("./db_connection.php");
+include ($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 $sql = 
-"
-INSERT INTO 041_customers 
+"INSERT INTO 041_customers 
 (customer_fname, customer_lname, customer_dni , customer_email , customer_phone , customer_birthdate , customer_password, customer_status )	
 VALUES (
 '$name ', '$lname', '$dni', '$email', '$number', '$birthdate', '$password', '$status'
-    )
-";
+    );";
  
 $query = mysqli_query($mysqli, $sql);
 

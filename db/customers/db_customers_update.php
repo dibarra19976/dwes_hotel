@@ -10,7 +10,7 @@ $phone = $_POST['phone'];
 $id = $_POST['id'];
 $status = $_POST['status'];
 
-include ("./db_connection.php");
+include ($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 $sql = 
 "

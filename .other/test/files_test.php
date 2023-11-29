@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body>
-    <?php //include("../../header.php") ?>
+    <?php include('/student041/dwes/header.php'); ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  ">
         <div class="float-content">
             <h1>Image test</h1>
@@ -25,6 +25,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <button type="submit" class=" btn btn-primary m-3">Submit</button>
             </div>
             </form>
+            <div class="row">
+                <form action="#">
+                    <select name="" id="">
+                        <?php 
+                        $directorio = "../../img/rooms";
+                        $todos_los_archivos  = scandir($directorio);
+                        $archivos = array_diff($todos_los_archivos, array('.', '..'));
+                        foreach($archivos as $fichero){
+                            echo "<option>" ;
+                            print_r($fichero);
+                            echo " </option>";
+                        }
+                        ?>
+                    </select>
+                </form>
+            </div>
         </div>
     </div>
 </body>

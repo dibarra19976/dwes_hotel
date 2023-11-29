@@ -43,9 +43,7 @@
 
             <button type="submit" class=" btn btn-primary">Submit</button>
     </div>
-    <div class="d-none">
-        <input class="form-control" type="text" name="id" id="id" required value="<?php echo $_POST['room_id']; ?>">
-    </div>
+    <input class="form-control" type="hidden" name="id" id="id" required value="<?php echo $_POST['room_id']; ?>">
     </form>
     </div>
     </div>

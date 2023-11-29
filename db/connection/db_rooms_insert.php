@@ -16,7 +16,7 @@ $img_2 = $_POST['img_2'];
 $img_3 = $_POST['img_3'];
 
 
-include ("./db_connection.php");
+include('/student041/dwes/db/connection/db_connection.php'); 
 
 $sql = 
 "

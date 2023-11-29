@@ -2,15 +2,16 @@
 
 include("db_connection.php");
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+$email = trim($_POST['email']);
+$password = trim($_POST['password']);
 
 $sql_query =
     "
 SELECT * FROM 041_customers 
 WHERE customer_email = '$email'
-AND customer_password = '$password'; 
-";
+AND customer_password = '$password'
+AND customer_status != 'disabled'; 
+"; 
 
 
 $result = mysqli_query($mysqli, $sql_query);

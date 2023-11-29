@@ -1,6 +1,6 @@
 <?php
 
-include("../db/db_connection.php");
+include ($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 $sql_query =
   "
 SELECT * FROM 041_customers WHERE !( customer_status = 'disabled'); 
@@ -53,11 +53,11 @@ $i = 1;
         echo "</td> <td>";
       ?>
        <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
-        <form action="../forms/form_customers_update.php" method="POST">
+        <form action="/student041/dwes/forms/customers/form_customers_update.php" method="POST">
           <input type="text" name="customer_id" id="customer_id" value="<?php echo $customer['customer_id']; ?>" hidden>
           <button class="btn btn-primary">Update</button>
         </form>
-        <form action="../forms/form_customers_delete.php" method="POST">
+        <form action="/student041/dwes/forms/customers/form_customers_delete.php" method="POST">
           <input type="text" name="customer_id" id="customer_id" value="<?php echo $customer['customer_id']; ?>" hidden>
           <button class="btn btn-secondary">Delete</button>
         </form>

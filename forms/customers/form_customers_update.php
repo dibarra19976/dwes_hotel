@@ -73,11 +73,10 @@ include("../db/db_customers_update_select.php");
                             </div>
                         </div>
                     </div>
+                    <input class="form-control" type="hidden" name="id" id="id" required value="<?php echo $customer[0]['customer_id']; ?>">
 
-                    <div class="d-none">
-                        <input class="form-control" type="text" name="id" id="id" required value="<?php echo $customer[0]['customer_id']; ?>">
 
-                    </div>
+
                     <button type="submit" class="col-12  btn btn-primary">Submit</button>
                 </div>
             </form>
