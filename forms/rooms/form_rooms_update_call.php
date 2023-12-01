@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
         <div class="float-content w-100">            <h1>Update room</h1>
 
-        <form class="row align-items-start" action="./form_rooms_update.php" method="POST">
+        <form class="row align-items-start" action="/student041/dwes/forms/rooms/form_rooms_update.php" method="POST">
         
             <div class="mb-3 col-12">
                 <div class="row">
@@ -25,7 +25,7 @@
                         <label for="room_id"  class="form-label">Select a room: </label>
                         <select class="form-select w-100" name="room_id">
                             <?php 
-                           include("../db/db_rooms_option_list.php");
+                           include ($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/rooms/db_rooms_option_list.php");
                            
                             ?>
                         </select>

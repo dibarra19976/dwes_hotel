@@ -1,5 +1,5 @@
 <?php
-include("../db/db_reservations_update_select.php");
+include($_SERVER["DOCUMENT_ROOT"]. "/student041/dwes/db/reservations/db_reservations_update_select.php");
 
 ?>
 <!DOCTYPE html>
@@ -14,12 +14,12 @@ include("../db/db_reservations_update_select.php");
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  ">
         <div class="float-content">
             <h1>Update reservation</h1>
 
-            <form class="row align-items-start" action="../db/db_reservations_update.php" method="POST">
+            <form class="row align-items-start" action="/student041/dwes/db/reservations/db_reservations_update.php" method="POST">
                 <input type="hidden" name="reservation_id" value="<?php echo $reservation_id ?>">
                 <div class="mb-3 col-12">
                     <div class="row">
@@ -28,7 +28,7 @@ include("../db/db_reservations_update_select.php");
                             <select class="form-select" name="room">
                                 <?php
 
-                                include("../db/db_reservations_update_room_list.php");
+                                include($_SERVER["DOCUMENT_ROOT"]. "/student041/dwes/db/reservations/db_reservations_update_room_list.php");
 
                                 ?>
                             </select>
@@ -37,7 +37,7 @@ include("../db/db_reservations_update_select.php");
                             <label class="form-label" for="client">Customer</label>
                             <select class="form-select" id="client" name="client">
                                 <?php
-                                include("../db/db_reservations_update_customers_list.php")
+                                include($_SERVER["DOCUMENT_ROOT"]. "/student041/dwes/db/reservations/db_reservations_update_customers_list.php")
                                 ?>
                             </select>
                         </div>

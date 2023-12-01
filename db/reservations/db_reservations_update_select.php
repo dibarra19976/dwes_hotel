@@ -1,7 +1,7 @@
 <?php
 
 $reservation_id = $_POST["reservation_id"]; 
-include ("../db/db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 $sql_query = 
 "
 SELECT * FROM 041_reservations WHERE reservation_id = '$reservation_id';  

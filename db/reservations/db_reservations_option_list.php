@@ -1,6 +1,6 @@
 <?php
 
-include ("../db/db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 $sql_query = 
 "
 SELECT reservation_id FROM `041_reservations` 

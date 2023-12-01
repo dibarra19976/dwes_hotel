@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
 
     <!-- Primero el buscador de reservas -->
 
@@ -27,8 +27,8 @@
     ?>
     <div class="container-fluid content content">
         <div class="container ">
-            <form class="row" action="../db/db_rooms_select_availability.php" method="POST">
-                <form class="row align-items-start" action="db/db_rooms_select_availability.php" method="POST">
+            <form class="row" action="/student041/dwes/db/rooms/db_rooms_select_availability.php" method="POST">
+                <form class="row align-items-start" action="/student041/dwes/db/rooms/db_rooms_select_availability.php" method="POST">
                     <div class="mb-3 col">
                         <label for="date_in" class="form-label">Check in</label>
                         <input min="<?php echo date("Y-m-d") ?>" required="true" type="date" class="form-control" name="date_in" value="<?php if (isset($_SESSION["date_in"])) {

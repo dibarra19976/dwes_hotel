@@ -4,16 +4,14 @@ include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.
 $sql =
   "
 
-  SELECT `reservation_id`,`reservation_date_in`,`reservation_date_out`,`reservation_room_price`,`reservation_room_extras`, `reservation_services`,`reservation_status`, `041_fullName`(c.customer_fname, c.customer_lname) AS 'reservation_client', r.room_number AS 'reservation_room' FROM `041_reservations` 
-  
-  INNER JOIN `041_rooms` AS r ON r.room_id = `reservation_room`
-  INNER JOIN `041_customers` AS c ON c.customer_id = `reservation_client`
-  WHERE reservation_status NOT IN ('cancelled', 'check-out')
-  ORDER BY reservation_id ASC
+  SELECT `invoice_reservation_id`,`invoice_date_in`,`invoice_date_out`,`invoice_room_price`,`invoice_room_extras`, `invoice_services`,`invoice_status`, `041_fullName`(c.customer_fname, c.customer_lname) AS 'invoice_client', r.room_number AS 'invoice_room', `invoice_room_total` , `invoice_room_services_total`, `invoice_room_extras_total`, `invoice_total_days`, `invoice_subtotal` FROM `041_invoices` 
+  INNER JOIN `041_rooms` AS r ON r.room_id = `invoice_room`
+  INNER JOIN `041_customers` AS c ON c.customer_id = `invoice_client`
+  ORDER BY invoice_reservation_id ASC
   ";
 
 $result = mysqli_query($mysqli, $sql);
-$reservations  = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$invoices  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 $i = 1;
 
@@ -28,40 +26,50 @@ $i = 1;
         <th scope="col">Client</th>
         <th scope="col">Date IN</th>
         <th scope="col">Date OUT</th>
+        <th scope="col">Total Days</th>
         <th scope="col">Room Price (Per night)</th>
+        <th scope="col">Room Total</th>
         <th scope="col">Room Extras</th>
+        <th scope="col">Room Extras Total</th>
         <th scope="col">Room Services</th>
-        <th scope="col">Reservation Status</th>
+        <th scope="col">Room Services Total</th>
+        <th scope="col">Invoice Status</th>
+        <th scope="col">Invoice Subtotal</th>
         <th scope="col">Quick Actions</th>
       </tr>
     </thead>
     <tbody class="table-group-divider">
 
       <?php
-      foreach ($reservations as $reservation) {
+      foreach ($invoices as $invoice) {
         echo '<tr> <th scope="row">';
-        echo $reservation['reservation_id'];
+        echo $invoice['invoice_reservation_id'];
         echo "</th> <td>";
-        echo $reservation['reservation_room'];
+        echo $invoice['invoice_room'];
         echo "</td> <td>";
-        echo $reservation["reservation_client"];
+        echo $invoice["invoice_client"];
         echo "</td> <td>";
-        echo $reservation['reservation_date_in'];
+        echo $invoice['invoice_date_in'];
         echo "</td> <td>";
-        echo $reservation['reservation_date_out'];
+        echo $invoice['invoice_date_out'];
         echo "</td> <td>";
-        echo $reservation['reservation_room_price'];
+        echo $invoice['invoice_total_days'];
         echo "</td> <td>";
-
-        $decode = json_decode($reservation['reservation_room_extras']);
+        echo $invoice['invoice_room_price'];
+        echo "</td> <td>";
+        echo $invoice['invoice_room_total'];
+        echo "</td> <td>";
+        $decode = json_decode($invoice['invoice_room_extras']);
         echo "<table class='table table-borderless table-hover '>";
         foreach ($decode as $key => $value) {
           echo "<tr> <td>" . $key . "</td> <td>" . $value[0] . "</td> </tr>";
         }
         echo "</table>";        
         echo "</td> <td>";
+        echo $invoice['invoice_room_extras_total'];
+        echo "</td> <td>";
 
-        $decode2 = json_decode($reservation['reservation_services']);
+        $decode2 = json_decode($invoice['invoice_services']);
         
         echo "<table class='table table-borderless table-hover '>";
         echo '<tr>  <th scope="col"></th>
@@ -86,28 +94,20 @@ $i = 1;
           echo "  </tr> ";
         }                
         echo "</table>";
-  
-        // print_r($decode2);
-        // 
-        // foreach ($decode2 as $key => $value) {
-        //   echo "<tr> <td>" . $key . "</td> <td>" . $value[0] . "</td> </tr>";
-        // }
-
-        echo "</>";     
         echo "</td> <td>";
-        echo $reservation['reservation_status'];
+        echo $invoice['invoice_room_services_total'];
+        echo "</td> <td>";
+        echo $invoice['invoice_status'];
+        echo "</td> <td>";
+        echo $invoice['invoice_subtotal'];
         echo "</td> <td>";
 
 
       ?>
        <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
-       <form action="/student041/dwes/forms/reservations/form_reservations_update.php" method="POST">
-          <input type="text" name="reservation_id" id="reservation_id" value="<?php echo $reservation['reservation_id']; ?>" hidden>
+       <form action="/student041/dwes/forms/invoices/form_invoices_update.php" method="POST">
+          <input type="text" name="reservation_id" id="reservation_id" value="<?php echo $invoice['invoice_reservation_id']; ?>" hidden>
           <button class="btn btn-primary">Update</button>
-        </form>
-        <form action="/student041/dwes/forms/reservations/form_reservations_delete.php" method="POST">
-          <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
-          <button class="btn btn-secondary">Delete</button>
         </form>
        </div>
       <?php

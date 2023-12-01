@@ -1,6 +1,6 @@
 <?php
-include ("./db_connection.php");
-include("../db/db_reservations_update_select.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/reservations/db_reservations_update_select.php");
 
 $room = $_POST['room'];
 $client = $_POST['client'];
@@ -53,5 +53,5 @@ if ($date_in < $date_out) {
 
     }
 }
-header("Location: /student041/dwes/forms/form_reservations_update_call.php");     
+header("Location: /student041/dwes/forms/reservations/form_reservations_update_call.php");     
 ?>

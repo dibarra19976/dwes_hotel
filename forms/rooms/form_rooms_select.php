@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
     <div class="container-fluid content">
         <h1 class="white">Rooms</h1>
     <?php
-    include("../db/db_rooms_select_table.php");
+    include($_SERVER["DOCUMENT_ROOT"] . "/student041/dwes/db/rooms/db_rooms_select_table.php");
     ?>
     </div>
 

@@ -7,7 +7,7 @@ $date_out = $_POST['date_out'];
 
 if($date_in < $date_out){
     
-include ("db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 $sql = "CALL `041_checkAvailableRooms`('$date_in', '$date_out'); ";
 $result = mysqli_query($mysqli, $sql);

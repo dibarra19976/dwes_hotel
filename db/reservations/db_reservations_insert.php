@@ -5,7 +5,7 @@ $client = $_POST['client'];
 $date_in = $_POST['date_in'];
 $date_out = $_POST['date_out'];
 
-include("./db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 
 if ($date_in < $date_out) {
@@ -60,9 +60,9 @@ if ($date_in < $date_out) {
         ($client, $room, '$date_in', '$date_out', $room_price, '$room_extras', '$services_template', 'booked'  );
         ";
 
-        echo $sql_insert;
         $result_insert = mysqli_query($mysqli, $sql_insert);
         print_r($result_insert);
     }
+    header("Location: /student041/dwes/forms/reservations/form_reservations_insert.php");
 }
 

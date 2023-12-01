@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
         <div class="float-content">
         <h1>Insert customer</h1>
-        <form class="row align-items-start" action="../db/db_customers_insert.php" method="POST">
+        <form class="row align-items-start" action="/student041/dwes/db/customers/db_customers_insert.php" method="POST">
             
             <div class="mb-3 col-12">
                 <div class="row">

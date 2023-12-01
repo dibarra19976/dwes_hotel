@@ -16,7 +16,7 @@ $img_2 = $_POST['img_2'];
 $img_3 = $_POST['img_3'];
 
 
-include('/student041/dwes/db/connection/db_connection.php'); 
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 $sql = 
 "
@@ -30,4 +30,4 @@ VALUES (
  
 $query = mysqli_query($mysqli, $sql);
 
-header("Location: /student041/dwes/forms/form_rooms_insert.php");     
+header("Location: /student041/dwes/forms/rooms/form_rooms_insert.php");     

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"] . '/student041/dwes/header.php') ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  ">
         <div class="float-content">
             <h1>Delete customer</h1>

@@ -1,5 +1,5 @@
 <?php
-include("../db/db_customers_update_select.php");
+include($_SERVER["DOCUMENT_ROOT"]. "/student041/dwes/db/customers/db_customers_update_select.php");
 
 ?>
 <!DOCTYPE html>
@@ -14,12 +14,12 @@ include("../db/db_customers_update_select.php");
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  ">
         <div class="float-content">
             <h1>Update customer</h1>
 
-            <form class="row align-items-start" action="../db/db_customers_update.php" method="POST">
+            <form class="row align-items-start" action="/student041/dwes/db/customers/db_customers_update.php" method="POST">
 
                 <div class="mb-3 col-12">
                     <div class="row">

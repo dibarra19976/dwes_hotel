@@ -1,5 +1,5 @@
 <?php
-include("./db_rooms_update_select.php");
+include($_SERVER["DOCUMENT_ROOT"]. "/student041/dwes/db/rooms/db_rooms_update_select.php");
 
 $number = $_POST['number'];
 $status = $_POST['status'];
@@ -24,7 +24,7 @@ $img_2 = $_POST['img_2'];
 $img_3 = $_POST['img_3'];
 $room_id = $_POST['room_id'];
 
-include ("./db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 $sql = 
 "
@@ -37,4 +37,4 @@ WHERE room_id = '$room_id'
 echo $sql;
 $query = mysqli_query($mysqli, $sql);
 
-header("Location: /student041/dwes/forms/form_rooms_update_call.php");     
+header("Location: /student041/dwes/forms/rooms/form_rooms_update_call.php");     

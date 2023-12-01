@@ -5,7 +5,7 @@
 $delete_confirmation = $_POST['delete_confirmation'];
 $id = $_POST['id'];
 
-include ($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 session_start();
 if($delete_confirmation=='yes'){

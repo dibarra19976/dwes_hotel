@@ -1,5 +1,5 @@
 <?php
-include('/student041/dwes/db/rooms/db_room_type_select.php'); 
+include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/db/rooms/db_room_type_select.php'); 
 
 ?>
 <!DOCTYPE html>
@@ -14,11 +14,11 @@ include('/student041/dwes/db/rooms/db_room_type_select.php');
 </head>
 
 <body>
-    <?php include("../header.php") ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"].'/student041/dwes/header.php')  ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  " >
         <div class="float-content">        <h1>Insert room </h1>
 
-        <form class="row" action="../db/db_rooms_insert.php" method="POST">
+        <form class="row" action="/student041/dwes/db/rooms/db_rooms_insert.php" method="POST">
             <div class=" col">
                 <label for="number" class="form-label">Room Number</label>
                 <input type="text" class="form-control" name="number" min="0">

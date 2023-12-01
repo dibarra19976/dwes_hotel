@@ -1,6 +1,6 @@
 <?php
 
-include("db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 $email = trim($_POST['email']);
 $password = trim($_POST['password']);
@@ -20,10 +20,10 @@ $result  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 if (count($result) == 0) {
     echo " es zero";
-    header("Location: /student041/dwes/forms/form_log_in.php");     
+    header("Location: /student041/dwes/forms/login/form_log_in.php");     
 } else if (count($result) > 1) {
     echo "\n mas de uno";
-    header("Location: /student041/dwes/forms/form_log_in.php");     
+    header("Location: /student041/dwes/forms/login/form_log_in.php");     
 } else if (count($result) == 1) {
     $id = $result[0]['customer_id'];
 

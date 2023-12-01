@@ -1,6 +1,6 @@
 <?php
 
-include("../db/db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 $sql =
   "
 SELECT * FROM 041_rooms; 
@@ -11,7 +11,7 @@ $result = mysqli_query($mysqli, $sql);
 $rooms  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 $i = 1;
 
-include("../db/db_room_type_select.php");
+include($_SERVER["DOCUMENT_ROOT"]. "/student041/dwes/db/rooms/db_room_type_select.php");
 
 ?>
 
@@ -52,11 +52,11 @@ include("../db/db_room_type_select.php");
         echo "</td> <td>";
       ?>
        <div class="d-flex text-center  flex-column align-items-center justify-content-between ">
-       <form action="../forms/form_rooms_update.php" method="POST">
+       <form action="/student041/dwes/forms/rooms/form_rooms_update.php" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
           <button class="btn btn-primary">Update</button>
         </form>
-        <form action="../forms/form_rooms_delete.php" method="POST">
+        <form action="/student041/dwes/forms/rooms/form_rooms_delete.php" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
           <button class="btn btn-secondary">Delete</button>
         </form>

@@ -10,7 +10,7 @@ $phone = $_POST['phone'];
 $id = $_POST['id'];
 $status = $_POST['status'];
 
-include ($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
 
 $sql = 
 "
@@ -35,4 +35,4 @@ $select  = mysqli_fetch_all($result, MYSQLI_ASSOC);
 print_r($select);
 
 
-header("Location: /student041/dwes/forms/form_customers_update_call.php");     
+header("Location: /student041/dwes/forms/customers/form_customers_update_call.php");     

@@ -87,7 +87,7 @@ session_start();
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_select.php">Select Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_insert.php">Insert Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_update_call.php">Update Reservation</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/rooms/form_rooms_select.php">Delete Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_delete_call.php">Delete Reservation</a></li>
                 </ul>
               </li>
               <li class="nav-item dropstart">
@@ -95,7 +95,7 @@ session_start();
                   Invoices
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Select Invoices</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/invoices/form_invoices_select.php">Select Invoices</a></li>
                   <li><a class="dropdown-item" href="#">Insert Invoice</a></li>
                   <li><a class="dropdown-item" href="#">Update Invoice</a></li>
 
