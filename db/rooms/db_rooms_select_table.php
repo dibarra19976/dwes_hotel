@@ -54,11 +54,11 @@ include($_SERVER["DOCUMENT_ROOT"]. "/student041/dwes/db/rooms/db_room_type_selec
        <div class="d-flex text-center  flex-column align-items-center justify-content-between ">
        <form action="/student041/dwes/forms/rooms/form_rooms_update.php" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
-          <button class="btn btn-primary">Update</button>
+          <button class="btn btn-primary m-3"><i class="bi bi-arrow-clockwise"></i>Update</button>
         </form>
         <form action="/student041/dwes/forms/rooms/form_rooms_delete.php" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
-          <button class="btn btn-secondary">Delete</button>
+          <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i>Delete</button>
         </form>
        </div>
       <?php

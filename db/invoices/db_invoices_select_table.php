@@ -107,7 +107,7 @@ $i = 1;
        <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
        <form action="/student041/dwes/forms/invoices/form_invoices_update.php" method="POST">
           <input type="text" name="reservation_id" id="reservation_id" value="<?php echo $invoice['invoice_reservation_id']; ?>" hidden>
-          <button class="btn btn-primary">Update</button>
+          <button class="btn btn-primary m-3"><i class="bi bi-arrow-clockwise"></i>Update</button>
         </form>
        </div>
       <?php

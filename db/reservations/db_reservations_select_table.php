@@ -103,11 +103,11 @@ $i = 1;
        <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
        <form action="/student041/dwes/forms/reservations/form_reservations_update.php" method="POST">
           <input type="text" name="reservation_id" id="reservation_id" value="<?php echo $reservation['reservation_id']; ?>" hidden>
-          <button class="btn btn-primary">Update</button>
+          <button class="btn btn-primary m-3"><i class="bi bi-arrow-clockwise"></i>Update</button>
         </form>
         <form action="/student041/dwes/forms/reservations/form_reservations_delete.php" method="POST">
           <input type="text" name="room_id" id="room_id" value="<?php echo $room['room_id']; ?>" hidden>
-          <button class="btn btn-secondary">Delete</button>
+          <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i>Delete</button>
         </form>
        </div>
       <?php

@@ -21,20 +21,20 @@
         echo "
         <div class='padding-notification alert alert-primary alert-dismissible fade show position-absolute start-50 z-on-top translate-middle w-75' role='alert'>";
         if ($_SESSION['deleted'] == "yes") {
-            echo "Reservation was deleted";
+            echo "Reservation was set as check-out and the invoice was created";
         } else {
-            echo "Reservation was not deleted";
+            echo "Reservation set as cancelled and the invoice was created";
         }
         echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
         </div>";
     }
-    unset($_SESSION['deleted']);
+    unset($_SESSION['message']);
     ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  ">
         <div class="float-content w-100 ">
-            <h1>Delete reservation</h1>
+            <h1>Insert Invoice</h1>
 
-            <form class="row align-items-start" action="/student041/dwes/forms/reservations/form_reservations_delete.php" method="POST">
+            <form class="row align-items-start" action="/student041/dwes/forms/invoices/form_invoices_insert.php" method="POST">
 
                 <div class="mb-3 col-12">
                     <div class="row">

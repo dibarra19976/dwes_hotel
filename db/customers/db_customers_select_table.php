@@ -55,11 +55,11 @@ $i = 1;
        <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
         <form action="/student041/dwes/forms/customers/form_customers_update.php" method="POST">
           <input type="text" name="customer_id" id="customer_id" value="<?php echo $customer['customer_id']; ?>" hidden>
-          <button class="btn btn-primary">Update</button>
+          <button class="btn btn-primary m-3"><i class="bi bi-arrow-clockwise"></i>Update</button>
         </form>
         <form action="/student041/dwes/forms/customers/form_customers_delete.php" method="POST">
           <input type="text" name="customer_id" id="customer_id" value="<?php echo $customer['customer_id']; ?>" hidden>
-          <button class="btn btn-secondary">Delete</button>
+          <button class="btn btn-secondary"><i class="bi bi-trash-fill"></i>Delete</button>
         </form>
         </div>
       <?php

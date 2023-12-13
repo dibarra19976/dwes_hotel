@@ -20,28 +20,6 @@ que los usuarios disbaled no puedan iniciar sesion
 revisar que las tablas set tengan as deifned
 hacer lo de los checkbox e inputs de valen en resercations y otros selects blablabla
 
-hacer connection en mi db
-
-hacer un archivo de actualizacion con las tablas nuevas 
-
-REVISAR auto-increment, y default value
-
-COMPARAR LAS TABLAS ANTIGUAS A LAS NUEVAS
-
-añadir drop table al principio
-
-acabar reservation update y delete (que lo haga cancelled y luego create invoice
-
-)
-
-hacer tabla invoice (el resto no)
-
-insert invoice que sea solo el delete de reservations
-
-crear isiarop emroqie amtes de mandarlo
-
-reordernarlo todo por sub carpetas
-
 solo hacer una carpeta de imagenes
 hacer un check para elegir si actualizar las imagenes por ruta o por archivo
 hacer un innerjoin para los tipos
