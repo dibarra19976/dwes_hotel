@@ -63,7 +63,7 @@ session_start();
                   Customers
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_select.php">Select Customer</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/customers/ajax_get_form_customers_select.php">Select Customer</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_insert.php">Insert Customer</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_update_call.php">Update Customer</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/customers/form_customers_delete_call.php">Delete Customer</a></li>
@@ -85,30 +85,37 @@ session_start();
                   Reservations
                 </a>
                 <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_status.php">Reservation Status</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_select.php">Select Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_insert.php">Insert Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_update_call.php">Update Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_delete_call.php">Delete Reservation</a></li>
                 </ul>
               </li>
-              <li class="nav-item dropstart">
-                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Invoices
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/invoices/form_invoices_select.php">Select Invoices</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/invoices/form_invoices_insert_call.php">Insert Invoice</a></li>
-
-                </ul>
+             
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/student041/dwes/forms/invoices/form_invoices_select.php">Invoice</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="/student041/dwes/forms/services/form_services.php">Services</a>
               </li>
+
+
             </ul>
         <?php
           }
         }
         ?>
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/student041/dwes/forms/services/form_services.php"><i class="bi bi-question-circle"></i> Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/student041/dwes/forms/services/form_services.php"><i class="bi bi-star-fill"></i> Review us!</a>
+          </li>
+        </ul>
         <h5 class="navbar-nav ml-auto mb-2 mb-lg-0 d-none d-lg-block d-xl-block d-xxl-block mw-5">
           Welcome, <?php
                     $name =  ($_SESSION['login_fname'] ?? "Guest ") . " " . ($_SESSION['login_lname'] ?? "");

@@ -24,7 +24,7 @@
         echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
         </div>";
     }
-    unset($_SESSION['deleted']);
+    unset($_SESSION['message']);
     ?>
     <div class="container vh-100 d-flex flex-column align-items-center justify-content-center  ">
         <div class="float-content w-100 ">
@@ -66,7 +66,7 @@
                 </div>
 
                 </div>
-                <button type="submit" class=" btn btn-primary">Submit</button>
+                <button type="submit" class=" btn btn-primary">Add Service</button>
 
         </div>
 

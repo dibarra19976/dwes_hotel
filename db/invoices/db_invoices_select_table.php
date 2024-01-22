@@ -35,7 +35,6 @@ $i = 1;
         <th scope="col">Room Services Total</th>
         <th scope="col">Invoice Status</th>
         <th scope="col">Invoice Subtotal</th>
-        <th scope="col">Quick Actions</th>
       </tr>
     </thead>
     <tbody class="table-group-divider">
@@ -100,17 +99,6 @@ $i = 1;
         echo $invoice['invoice_status'];
         echo "</td> <td>";
         echo $invoice['invoice_subtotal'];
-        echo "</td> <td>";
-
-
-      ?>
-       <div class="d-flex text-center  flex-column align-items-center justify-content-center ">
-       <form action="/student041/dwes/forms/invoices/form_invoices_update.php" method="POST">
-          <input type="text" name="reservation_id" id="reservation_id" value="<?php echo $invoice['invoice_reservation_id']; ?>" hidden>
-          <button class="btn btn-primary m-3"><i class="bi bi-arrow-clockwise"></i>Update</button>
-        </form>
-       </div>
-      <?php
         echo "</td>";
       }
 

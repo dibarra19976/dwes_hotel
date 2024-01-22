@@ -1,13 +1,14 @@
 <?php
+include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/functions/php/functions.php");
 
-$name = $_POST['name'];
-$lname = $_POST['lname'];
-$dni = $_POST['dni'];
-$password = $_POST['password'];
-$birthdate = $_POST['birthdate'];
-$email = $_POST['email'];
-$number = $_POST['number'];
-$status = $_POST['status'];
+$name = validateInput($_POST['name']);
+$lname =validateInput($_POST['lname']);
+$dni = validateInput($_POST['dni']);
+$password =validateInput($_POST['password']);
+$birthdate = validateInput($_POST['birthdate']);
+$email = validateInput($_POST['email']);
+$number = validateInput($_POST['number  ']);
+$status = validateInput($_POST['status']);
 
 
 include($_SERVER["DOCUMENT_ROOT"]."/student041/dwes/db/connection/db_connection.php");
