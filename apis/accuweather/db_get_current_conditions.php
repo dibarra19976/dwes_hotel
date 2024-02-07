@@ -1,5 +1,7 @@
 <?php
-
+    $weather_info = "http://dataservice.accuweather.com/currentconditions/v1/3544090/?apikey=Jf8GXnTKOKPxT35yD8RHA8MvgubaE26G&details=true";
+    
+    echo $weather_info;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +27,9 @@
 
     <script>
         let apikey = "Jf8GXnTKOKPxT35yD8RHA8MvgubaE26G";
-        let locale = "madrid";
-
-        // console.log(getlocation(apikey, locale));
+        let locale = "3544090";
+        // 3544090
+        // getlocation(apikey, locale);
 
         function getlocation(apikey, location) {
             const xhttp = new XMLHttpRequest();
@@ -35,13 +37,16 @@
                 document.getElementById("demo").innerHTML =
                     this.responseText;
                     let json = JSON.parse(this.responseText);
-                    let code = json[0]["Key"];
+                    console.log(this.responseText);
                     
-                    callback(code);
             }
-            xhttp.open("GET", "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apikey + "&q=" + location, true);
+            xhttp.open("GET", "http://dataservice.accuweather.com/currentconditions/v1/"+ location +"/?apikey=" + apikey, true);
             xhttp.send();
 
+        }
+
+        function saveToFile(json){
+            
         }
     </script>
 </body>

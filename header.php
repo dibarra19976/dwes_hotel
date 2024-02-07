@@ -86,7 +86,7 @@ session_start();
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_status.php">Reservation Status</a></li>
-                  <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_select.php">Select Reservation</a></li>
+                  <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/ajax_get_form_reservations_select.php">Select Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_insert.php">Insert Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_update_call.php">Update Reservation</a></li>
                   <li><a class="dropdown-item" href="/student041/dwes/forms/reservations/form_reservations_delete_call.php">Delete Reservation</a></li>
@@ -110,7 +110,7 @@ session_start();
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/student041/dwes/forms/services/form_services.php"><i class="bi bi-question-circle"></i> Help</a>
+            <a class="nav-link" aria-current="page" href="/student041/dwes/manual/site/index.html"><i class="bi bi-question-circle"></i> Help</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/student041/dwes/forms/services/form_services.php"><i class="bi bi-star-fill"></i> Review us!</a>

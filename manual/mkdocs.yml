@@ -1,0 +1,8 @@
+site_name: Hotel DWES
+site_url: https://remotehost.es/student041/dwes/  
+nav:
+  - Home: index.md
+  - User Manual: user.md
+  - Installation Guide: installation.md
+  - Code Documentation: documentation.md
+theme: material

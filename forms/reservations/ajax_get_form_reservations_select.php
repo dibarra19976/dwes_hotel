@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select customers</title>
+    <title>Select Reservations</title>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
@@ -16,7 +16,7 @@
     <?php include($_SERVER["DOCUMENT_ROOT"] . '/student041/dwes/header.php')  ?>
     <div class="container-fluid content">
         <div>
-            <h1 class="white ">Customers </h1>
+            <h1 class="white ">Reservations </h1>
             <input type="text" name="" id="search" class="form-control" oninput="loadDoc()" placeholder="Search... (Search by the first name)">
         </div>
         <div id="demo"></div>
@@ -31,7 +31,7 @@
                 document.getElementById("demo").innerHTML =
                     this.responseText;
             }
-            xhttp.open("GET"    , "/student041/dwes/db/customers/ajax_get_db_customers_select.php?text=" + str, true);
+            xhttp.open("GET"    , "/student041/dwes/db/reservations/ajax_get_db_reservations_select_table.php?text=" + str, true);
             xhttp.send();
         }
     </script>
